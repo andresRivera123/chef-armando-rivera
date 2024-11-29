@@ -1,0 +1,21 @@
+---
+import { CARDS } from "../utils/Cards";
+import Card from "./Card.astro";
+import SectionContainer from "./SectionContainer.astro";
+---
+
+<SectionContainer>
+  <h2 class="text-3xl mb-4">Viajes culinarios</h2>
+  <div class="flex flex-row flex-wrap gap-8 justify-between">
+    {
+      CARDS.map((card) => (
+        <Card
+          img={card.img}
+          country={card.country}
+          date={card.date}
+          title={card.title}
+        />
+      ))
+    }
+  </div>
+</SectionContainer>

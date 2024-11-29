@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import '@fontsource-variable/chivo';
+import Hero from "../components/Hero.astro";
+import CardList from "../components/CardList.astro";
 
 ---
 
-<Layout title="Chef Armando Rivera">
-  <Header />
-  <main></main>
+<Layout title="Chef Armando Rivera" description="Chef Armando Rivera, trotamundo y cocinero del mundo">
+  <Hero/>
+  <CardList/>
 </Layout>
 
 <style is:global>
@@ -18,11 +19,11 @@ import '@fontsource-variable/chivo';
   }
 
   html {
-    
+    background-color: var(--white-primary);
   }
 
   body {
-    background-color: var(--white-primary);
+
     color: var(--black-primary);
 	font-family: "Chivo Variable", sans-serif;	
   }
