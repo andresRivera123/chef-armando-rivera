@@ -4,17 +4,20 @@ interface CardProps {
   country: string;
   date: string;
   title: string;
+  link: string;
 }
 
-const { img, country, date, title } = Astro.props;
+const { img, country, date, title, link } = Astro.props;
 ---
 
 <article
-  class="w-[100%] lg:w-[48%] 2xl:w-[30%] aspect-video bg-slate-500 bg-contain bg-no-repeat rounded-3xl"
+  class="relative w-[100%] lg:w-[48%] 2xl:w-[30%] aspect-video bg-slate-500 bg-contain bg-no-repeat rounded-3xl"
   style={`background-image: url(${img})`}
 >
-  <div class="h-full flex flex-col justify-end p-6">
-    <p><span>{country}</span><span>{date}</span></p>
-    <h3>{title}</h3>
-  </div>
+  <footer class="absolute bottom-0 left-0 w-full bg-white opacity-80 p-4 rounded-b-3xl">
+    <p class="flex flex-row gap-4 text-base">
+      <span>{country}</span><span>{date}</span>
+    </p>
+    <h3 class="text-xl font-bold">{title}</h3>
+  </footer>
 </article>

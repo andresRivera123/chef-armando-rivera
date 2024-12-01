@@ -4,26 +4,34 @@ export interface Card {
     country: string;
     date: string;
     title: string;
+    link?: string;
 }
 
 export const CARDS: Card[] = [
     {
         id: 1,
-        img: "/richtershof-alemania-cover-card.png",
+        img: "/featured-card-richtershof-alemania-1.webp",
         country: "Marruecos",
         date: "2024-11-25",
         title: "Sabores de Marruecos",
       },
       {
         id: 2,
-        img: "/richtershof-alemania-cover-card.png",
+        img: "/featured-card-richtershof-alemania-1.webp",
         country: "Marruecos",
         date: "2024-11-25",
         title: "Sabores de Marruecos",
       },
       {
         id: 3,
-        img: "/richtershof-alemania-cover-card.png",
+        img: "/featured-card-richtershof-alemania-1.webp",
+        country: "Marruecos",
+        date: "2024-11-25",
+        title: "Sabores de Marruecos",
+      },
+      {
+        id: 4,
+        img: "/featured-card-richtershof-alemania-1.webp",
         country: "Marruecos",
         date: "2024-11-25",
         title: "Sabores de Marruecos",
