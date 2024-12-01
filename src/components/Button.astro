@@ -1,0 +1,15 @@
+---
+interface ButtonProps {
+  color: string;
+  icon?: string;
+}
+
+const { color, icon } = Astro.props;
+---
+
+<button
+  class={`max-w-max py-2 px-4 text-base text-${color} border-2 border-${color} rounded-md`}
+  style={`text-${color}`}
+>
+  <slot />
+</button>

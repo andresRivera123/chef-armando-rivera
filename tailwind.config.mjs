@@ -6,9 +6,12 @@ export default {
       colors: {
         white: "var(--white-primary)",
         black: "var(--black-primary)",
+        primary: "var(--primary)",
+        seconday: "var(--secondary)"
       },
       fontFamily: {
         homemade: ["Homemade Apple", "cursive"],
+        oleo: ["Oleo Script Swash Caps", "system-ui"],
       },
     },
   },

@@ -1,6 +1,6 @@
 ---
 import SectionContainer from "./SectionContainer.astro";
-import "@fontsource/homemade-apple";
+import Button from "./Button.astro";
 ---
 
 <SectionContainer>
@@ -12,8 +12,10 @@ import "@fontsource/homemade-apple";
       class="w-full sm:w-auto sm:h-[500px] transition-all ease-in-out duration-500"
     />
     <div class="text-center lg:text-left flex flex-col max-w-[800px]">
-      <h1 class="text-3xl sm:text-6xl font-homemade">Chef Armando Rivera </h1>
-      <h2 class="text-2xl sm:text-4xl">La historia de mi viaje culinario</h2>
+      <h1 class="text-3xl sm:text-6xl font-oleo">Chef Armando Rivera</h1>
+      <h2 class="text-xl sm:text-2xl mt-1">
+        La historia de mi viaje culinario
+      </h2>
     </div>
   </div>
 </SectionContainer>
@@ -44,17 +46,16 @@ import "@fontsource/homemade-apple";
 
   document.addEventListener("DOMContentLoaded", () => {
     const heroImage = document.getElementById("hero-image") as HTMLImageElement;
-    let currentImagenIndex = 1;
+    let currentImagenIndex = 0;
 
     setInterval(() => {
-
       heroImage.style.animation = "none";
-      void heroImage.offsetWidth; 
+      void heroImage.offsetWidth;
       currentImagenIndex = (currentImagenIndex + 1) % heroImages.length;
       heroImage.src = heroImages[currentImagenIndex];
       setTimeout(() => {
-        heroImage.style.animation = "slideIn 1s ease-in-out"; 
+        heroImage.style.animation = "slideIn 1s ease-in-out";
       }, 10);
-    }, 5000); 
+    }, 5000);
   });
 </script>
