@@ -31,15 +31,17 @@ import Menu from "../icons/Menu.astro";
 
   if (menuIcon && closeIcon && menuNav) {
     menuIcon.addEventListener("click", () => {
-      menuNav.classList.remove("hidden"); // Muestra el menú
-      menuNav.classList.add("flex"); // Aplica el layout
+      menuNav.classList.remove("hidden");
+      menuNav.classList.add("flex");
       closeIcon.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden")
     });
 
     closeIcon.addEventListener("click", () => {
-      menuNav.classList.add("hidden"); // Oculta el menú
+      menuNav.classList.add("hidden");
       menuNav.classList.remove("flex");
       closeIcon.classList.add("hidden");
+      document.body.classList.add("overflow-auto")
     });
   }
 </script>
