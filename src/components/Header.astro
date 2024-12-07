@@ -1,12 +1,45 @@
+---
+import Close from "../icons/Close.astro";
+import Menu from "../icons/Menu.astro";
+---
+
 <header
-  class="w-full max-w-[90%] 2xl:max-w-[1440px] mx-auto py-8 flex flex-col md:flex-row gap-y-4 lg:gap-y-6 items-center justify-between"
+  class="w-full max-w-[90%] 2xl:max-w-[1440px] mx-auto py-8 flex sm:flex-col md:flex-row gap-y-4 lg:gap-y-6 items-center justify-between"
 >
-  <a href="/" class="font-oleo text-2xl lg:text-3xl flex flex-row items-center gap-2 text-center"
+  <a
+    href="/"
+    class="font-oleo text-2xl lg:text-3xl flex flex-row items-center gap-2 text-center"
     ><img src="logo-chef-armando-rivera.webp" width="60" /> A R</a
   >
-  <nav class="flex gap-10">
+  <Menu id="openMenu" class="size-8 block sm:hidden" />
+  <nav
+    id="navMenu"
+    class="z-10 sm:z-0 w-full sm:w-max h-[100dvh] sm:h-auto fixed sm:relative left-0 bottom-0 justify-center items-center bg-white hidden sm:flex flex-col sm:flex-row gap-10 text-xl sm:text-base"
+  >
+    <Close id="closeMenu" class="z-20 size-8 hidden fixed top-10 right-10" />
+    <a href="/">Inicio</a>
     <a>Sobre mi</a>
     <a>Proyectos</a>
     <a href="/galery">Galería</a>
   </nav>
 </header>
+
+<script>
+  const menuIcon = document.getElementById("openMenu");
+  const closeIcon = document.getElementById("closeMenu");
+  const menuNav = document.getElementById("navMenu");
+
+  if (menuIcon && closeIcon && menuNav) {
+    menuIcon.addEventListener("click", () => {
+      menuNav.classList.remove("hidden"); // Muestra el menú
+      menuNav.classList.add("flex"); // Aplica el layout
+      closeIcon.classList.remove("hidden");
+    });
+
+    closeIcon.addEventListener("click", () => {
+      menuNav.classList.add("hidden"); // Oculta el menú
+      menuNav.classList.remove("flex");
+      closeIcon.classList.add("hidden");
+    });
+  }
+</script>
