@@ -1,4 +1,4 @@
-export interface Card {
+export interface Post {
     id: number;
     img: string;
     country: string;
@@ -7,7 +7,7 @@ export interface Card {
     link?: string;
 }
 
-export const CARDS: Card[] = [
+export const POSTS: Post[] = [
     {
         id: 1,
         img: "/featured-card-richtershof-alemania-1.webp",

@@ -1,0 +1,21 @@
+---
+import { POSTS } from "../utils/Posts";
+import Postpost from "./PostCard.astro";
+import SectionContainer from "./SectionContainer.astro";
+---
+
+<SectionContainer>
+  <h2 class="text-xl mb-4 font-semibold">Proyectos</h2>
+  <div class="flex flex-row flex-wrap gap-8 justify-between">
+    {
+      POSTS.map((post) => (
+        <Postpost
+          img={post.img}
+          country={post.country}
+          date={post.date}
+          title={post.title}
+        />
+      ))
+    }
+  </div>
+</SectionContainer>

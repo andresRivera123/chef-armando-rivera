@@ -1,0 +1,71 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import Movie from "../icons/Movie.astro";
+import World from "../icons/World.astro";
+import Chef from "../icons/Chef.astro";
+
+const CARD = [
+  {
+    icon: Chef,
+    title: "Expeciencia & Certificados",
+    description:
+      "Su amplia experiencia en cocina internacional y películas de renombre, así como prestigiosos títulos y certificaciones, resaltan su capacidad para liderar equipos y mantener la excelencia en entornos desafiantes.",
+    linkTitle: "Detalles sobre su carrera",
+    linkURL: "",
+  },
+  {
+    icon: Movie,
+    title: "El chef del cine",
+    description:
+      "Encargado de las producciones cinematográficas más destacadas del mundo como <i>El Laberinto del Fauno</i>, <i>Knight and Day</i>, <i>Astérix y Obélix</i> y <i>body of lies</i>. Fusionar la tradición culinaria con la innovación ha sido clave en la satisfacción de las exigencias de elencos internacionales.",
+    linkTitle: "Conocer más proyectos",
+    linkURL: "",
+  },
+  {
+    icon: World,
+    title: "Cocinando para el Mundo",
+    description:
+      "Su espíritu viajero lo ha llevado a recorrer diferentes continentes, desde la gran manzana en EE. UU. hasta el corazón de Madrid. Desde los desiertos de Marruecos hasta los viñedos de Alemania, y en cada paso, ha dejado su huella gastronómica.",
+    linkTitle: "Viaja con él a través de sus fotos ",
+    linkURL: "",
+  },
+];
+---
+
+<SectionContainer>
+  <div class="flex flex-row flex-wrap justify-between gap-4">
+    {
+      CARD.map((card) => (
+        <div class="relative flex flex-col w-full  md:w-[45%] xl:w-[400px] p-2 sm:p-6">
+          <div class="flex items-center mb-4">
+            <card.icon class="size-8" />
+            <h3 class="ml-3  text-xl font-semibold" set:html={card.title} />
+          </div>
+          <p class="block leading-normal mb-4" set:html={card.description} />
+          <div>
+            <a
+              href={card.linkURL}
+              class="font-semibold text-base hover:underline flex items-center"
+            >
+              {card.linkTitle}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-2 h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</SectionContainer>
