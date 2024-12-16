@@ -51,10 +51,17 @@ const { description } = Astro.props;
     font-weight: 300;
   }
 
+  h1,h2,h3,h4{
+    text-wrap: balance;
+  }
+  p,span{
+    text-wrap: pretty;
+  }
+
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: var(--black-primary);
-      color: var(--white-primary);
+      background: var(--white-primary);
+      color: var(--black-primary);
     }
   }
 </style>
