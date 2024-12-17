@@ -6,7 +6,7 @@ import SectionContainer from "./SectionContainer.astro";
 
 <SectionContainer class="lg:w-[50%] mx-auto">
   <h2 class="text-xl mt-4 mb-6 font-bold">Experiencia</h2>
-  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+  <ol class="relative border-s border-gray-200">
     {
       EXPERIENCE.map((experience, index) => (
         <li class="mb-12 ms-4 ml-5 flex justify-start">
@@ -22,14 +22,14 @@ import SectionContainer from "./SectionContainer.astro";
               <p class="mb-2 flex items-center gap-2 italic">
                 <experience.icon /> {experience.ubication}
               </p>
-              <p class="mb-4 text-base font-light  dark:text-gray-400">
+              <p class="mb-4 text-base font-light">
                 {experience.description}
               </p>
               {experience.linkTitle || experience.linkURL ? (
                 <a
                   href={experience.linkURL}
                   target="_blank"
-                  class="w-max mb-4 inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-70"
+                  class="w-max mb-4 inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform"
                 >
                   {experience.linkTitle}
                   <ArrowRight />
