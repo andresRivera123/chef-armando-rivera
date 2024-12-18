@@ -1,15 +1,22 @@
 ---
+import ArrowRight from "../icons/ArrowRight.astro";
+
 interface ButtonProps {
-  color: string;
-  icon?: string;
+  text: string;
+  color: "primary" | "secondary";
+  icon?: any;
+  link: string;
+  blank: boolean;
 }
 
-const { color, icon } = Astro.props;
+const { text, color = "primary", icon = ArrowRight, link, blank } = Astro.props;
 ---
 
-<button
-  class={`max-w-max py-2 px-4 text-base text-${color} border-2 border-${color} rounded-md`}
-  style={`text-${color}`}
+<a
+  href={link}
+  target={blank === true ? "_blank" : "_self"}
+  class={`w-max mb-4 inline-flex items-center px-4 py-2 text-sm font-medium border ${color === "primary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""} ${color === "secondary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""}`}
 >
-  <slot />
-</button>
+  {text}
+  <ArrowRight/>
+</a>
