@@ -4,6 +4,7 @@ import Movie from "../icons/Movie.astro";
 import World from "../icons/World.astro";
 import Chef from "../icons/Chef.astro";
 import ArrowRight from "../icons/ArrowRight.astro";
+import Button from "./Button.astro";
 
 const CARD = [
   {
@@ -42,14 +43,9 @@ const CARD = [
             <card.icon class="size-8 shrink-0" />
             <h3 class="ml-3  text-xl font-semibold" set:html={card.title} />
           </div>
-          <p class="block leading-normal mb-2 font-light" set:html={card.description} />
-          <a
-            href={card.linkURL}
-            class="font-semibold text-base hover:underline flex items-center"
-          >
-            {card.linkTitle}
-            <ArrowRight/>
-          </a>
+          <p class="block leading-normal mb-6 font-light" set:html={card.description} />
+          <Button text={card.title} color="primary" link={card.linkTitle} blank="false"/>
+          
         </div>
       ))
     }

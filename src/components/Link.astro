@@ -1,0 +1,18 @@
+---
+import ArrowRight from "../icons/ArrowRight.astro";
+
+interface linkProps {
+  href: string;
+  textLink: string;
+}
+
+const { href, textLink } = Astro.props;
+---
+
+<a
+  href={href}
+  class="font-semibold text-base hover:underline flex items-center hover:scale-y-105 transition-transform"
+>
+  {textLink}
+  <ArrowRight />
+</a>

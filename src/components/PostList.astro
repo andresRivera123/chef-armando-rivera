@@ -5,7 +5,7 @@ import SectionContainer from "./SectionContainer.astro";
 ---
 
 <SectionContainer>
-  <h2 class="text-xl mb-4 font-semibold">Proyectos</h2>
+  <h2 class="text-xl sm:text-2xl mb-6 font-semibold">Proyectos</h2>
   <div class="flex flex-row flex-wrap gap-8 justify-between">
     {
       POSTS.map((post) => (
@@ -14,6 +14,7 @@ import SectionContainer from "./SectionContainer.astro";
           country={post.country}
           date={post.date}
           title={post.title}
+          description={post.description}
         />
       ))
     }
