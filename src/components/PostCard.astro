@@ -16,16 +16,16 @@ const { img, country, date, title, description, slug} = Astro.props;
 <article
   class="md:w-[47%] xl:w-[30%] bg-white border border-gray-200 rounded-lg shadow"
 >
-  <a href={`/blog/${slug}`}>
+  <a href={`/proyectos/${slug}`}>
     <img class="rounded-t-lg" src={img} alt="" />
   </a>
   <div class="p-5">
-    <a href={`/blog/${slug}`}>
+    <a href={`/proyectos/${slug}`}>
       <h3 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
         {title}
       </h3></a
     >
     <p class="mb-4 text-base font-normal text-gray-700">{description}</p>
-    <Link href={`/blog/${slug}`} textLink="Ver proyecto" />
+    <Link href={`/proyectos/${slug}`} textLink="Ver proyecto" />
   </div>
 </article>

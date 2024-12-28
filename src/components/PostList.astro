@@ -1,5 +1,5 @@
 ---
-import POSTS from "../utils/Projects";
+import PROJECTS from "../utils/Projects";
 import Postpost from "./PostCard.astro";
 import SectionContainer from "./SectionContainer.astro";
 ---
@@ -8,13 +8,14 @@ import SectionContainer from "./SectionContainer.astro";
   <h2 class="text-xl sm:text-2xl mb-6 font-semibold">Proyectos</h2>
   <div class="flex flex-row flex-wrap gap-8 justify-between">
     {
-      POSTS.map((post) => (
+      PROJECTS.map((project) => (
         <Postpost
-          img={post.img}
-          country={post.country}
-          date={post.date}
-          title={post.title}
-          description={post.description}
+          img={project.img}
+          country={project.country}
+          date={project.date}
+          title={project.title}
+          description={project.description}
+          slug={project.slug}
         />
       ))
     }
