@@ -29,7 +29,7 @@ export const EXPERIENCE: Experience[] = [
     date: "2014 - 2015",
     title: "Chef de Partida en Gastronomía Mediterránea",
     icon: Germany,
-    ubication: "Hotel Weinromantikhotel Richtershof, Alemania.",
+    ubication: "Weinromantikhotel Richtershof, Alemania.",
     description:
       "Responsable del desarrollo y planificación de menús personalizados para los huéspedes del hotel y del restaurante culinario, asegurando la calidad y autenticidad de los platos. ",
     linkTitle: "Conocer el hotel",

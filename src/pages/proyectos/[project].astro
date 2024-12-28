@@ -1,0 +1,27 @@
+---
+// filepath: /c:/Users/Andyk/Documents/Github/chef-armando-rivera/src/pages/proyectos/[project].astro
+import Layout from "../../layouts/Layout.astro";
+import PROJECTS from "../../utils/Projects.ts";
+
+export function getStaticPaths() {
+  const paths = PROJECTS.map((project) => ({
+    params: { project: project.slug },
+  }));
+  console.log("Generated paths:", paths);
+  return paths; // Devolver un array en lugar de un objeto
+}
+
+const { project } = Astro.params;
+const currentProject = PROJECTS.find((p) => p.slug === project);
+
+if (!currentProject) {
+  throw new Error(`No se encontró el proyecto "${project}"`);
+}
+---
+
+<Layout
+  title={currentProject.metaTitle}
+  description={currentProject.metaDescription}
+>
+  <div>{currentProject.title}</div>
+</Layout>
