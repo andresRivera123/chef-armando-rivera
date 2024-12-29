@@ -10,7 +10,6 @@ export default {
         seconday: "var(--secondary)"
       },
       fontFamily: {
-        homemade: ["Homemade Apple", "cursive"],
         oleo: ["Oleo Script Swash Caps", "system-ui"],
       },
     },

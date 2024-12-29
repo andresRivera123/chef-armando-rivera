@@ -14,7 +14,6 @@
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource-variable/chivo": "^5.1.0",
     "@fontsource/cedarville-cursive": "^5.1.0",
-    "@fontsource/homemade-apple": "^5.1.0",
     "@fontsource/oleo-script-swash-caps": "^5.1.0",
     "astro": "^4.16.13",
     "tailwindcss": "^3.4.15",
