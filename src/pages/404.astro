@@ -8,17 +8,22 @@ import Layout from "../layouts/Layout.astro";
   title="Página no encontrada | Chef Armando Rivera"
   description="No podemos encontrar la página que buscas."
 >
-  <SectionContainer class="xl:w-[30%] mx-auto">
-    <img src="/404.webp" width="400" class="mx-auto mt-4" />
+  <SectionContainer class="xl:w-[30%] mx-auto mt-6">
+    <img src="/404.webp" width="400" class="mx-auto" />
     <div class="flex flex-col items-center text-center">
       <h1 class="mt-6 mb-4 text-2xl sm:text-3xl text-center font-bold">
         Algo se quemó en la cocina (¡es esta página!) 🔥
       </h1>
       <p class="text-base mb-6">
-        No hemos encontrado la página. No te preocupes, regresa al inicio para conocer más sobre mi trayectoria.
+        No hemos encontrado la página. No te preocupes, regresa al inicio para
+        conocer más sobre mi trayectoria.
       </p>
-      <Button text="Regresar al inicio" link="/" blank={false} class="mx-auto"/>
+      <Button
+        text="Regresar al inicio"
+        link="/"
+        blank={false}
+        class="mx-auto"
+      />
     </div>
-
   </SectionContainer></Layout
 >

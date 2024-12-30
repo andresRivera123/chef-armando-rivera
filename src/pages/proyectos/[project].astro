@@ -1,5 +1,6 @@
 ---
-// filepath: /c:/Users/Andyk/Documents/Github/chef-armando-rivera/src/pages/proyectos/[project].astro
+import SectionContainer from "../../components/SectionContainer.astro";
+import SwiperProject from "../../components/SwiperProject.astro";
 import Layout from "../../layouts/Layout.astro";
 import PROJECTS from "../../utils/Projects.ts";
 
@@ -8,7 +9,7 @@ export function getStaticPaths() {
     params: { project: project.slug },
   }));
   console.log("Generated paths:", paths);
-  return paths; // Devolver un array en lugar de un objeto
+  return paths;
 }
 
 const { project } = Astro.params;
@@ -23,5 +24,24 @@ if (!currentProject) {
   title={currentProject.metaTitle}
   description={currentProject.metaDescription}
 >
-  <div>{currentProject.title}</div>
+  <SectionContainer class="flex flex-col lg:flex-row gap-6 mt-6">
+    <div>
+      <h1 class="mt-6 mb-2 text-2xl sm:text-3xl font-bold">
+        {currentProject.title}
+      </h1>
+      <div class="flex gap-20">
+        <p>{currentProject.date}</p>
+        <p class="flex items-center gap-2">
+          <currentProject.iconCountry />
+          {currentProject.country}
+        </p>
+      </div>
+      <hr class="my-4" />
+      <p class="mb-6 text-base xl:text-lg">{currentProject.description}</p>
+      <SwiperProject/>
+    </div>
+    <aside class="w-full lg:w-2/6 bg-white">
+      <h2 class="text-xl sm:text-2xl mt-4 mb-6 font-bold text-center">Ver más proyectos</h2>
+    </aside>
+  </SectionContainer>
 </Layout>

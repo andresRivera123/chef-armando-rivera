@@ -1,8 +1,13 @@
+import Spain from "../icons/Spain.astro";
+import Germany from "../icons/Germany.astro";
+import UnitedStates from "../icons/UnitedStates.astro";
+
 interface Project {
   metaTitle: string;
   metaDescription: string;
   img: string;
   country: string;
+  iconCountry: any;
   date: string;
   title: string;
   description: string;
@@ -15,7 +20,8 @@ const PROJECTS: Project[] = [
     metaDescription: "S",
     img: "/featured-card-richtershof-alemania-1.webp",
     country: "Alemania",
-    date: "2024-12-20",
+    iconCountry: Germany,
+    date: "2014",
     description:
       "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
     title: "Weinromantikhotel, cocinando en Alemania",
@@ -26,6 +32,7 @@ const PROJECTS: Project[] = [
     metaDescription: "S",
     img: "/featured-card-richtershof-alemania-1.webp",
     country: "Marruecos",
+    iconCountry: Germany,
     date: "2024-11-25",
     description:
       "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
@@ -37,6 +44,7 @@ const PROJECTS: Project[] = [
     metaDescription: "S",
     img: "/featured-card-richtershof-alemania-1.webp",
     country: "Marruecos",
+    iconCountry: Germany,
     date: "2024-11-25",
     description:
       "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
@@ -48,6 +56,7 @@ const PROJECTS: Project[] = [
     metaDescription: "S",
     img: "/featured-card-richtershof-alemania-1.webp",
     country: "Marruecos",
+    iconCountry: Germany,
     date: "2024-11-25",
     description:
       "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
