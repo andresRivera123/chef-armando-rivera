@@ -11,7 +11,7 @@ const CARD = [
     icon: Chef,
     title: "Expeciencia & Certificados",
     description:
-      "Su amplia experiencia en cocina internacional y películas de renombre, así como prestigiosos títulos y certificaciones, resaltan su capacidad para liderar equipos y mantener la excelencia en entornos desafiantes.",
+      "Su amplia experiencia en cocina internacional (Mediterránea, Española y Americana), y sus prestigiosos títulos y certificaciones, resaltan su capacidad para liderar equipos y mantener la excelencia en entornos desafiantes.",
     linkTitle: "Detalles sobre su carrera",
     linkURL: "/about",
   },
@@ -19,7 +19,7 @@ const CARD = [
     icon: Movie,
     title: "El chef del cine",
     description:
-      "Encargado de las producciones cinematográficas más destacadas del mundo como <i>El Laberinto del Fauno</i>, <i>Knight and Day</i>, <i>Astérix y Obélix</i> y <i>body of lies</i>. Fusionar la tradición culinaria con la innovación ha sido clave en la satisfacción de las exigencias de elencos internacionales.",
+      "Participando como cocinero en grandes producciones cinematográficas como: <i>Juego de tronos</i>, <i>El Laberinto del Fauno</i>, <i>Damsel</i>, <i>Knight and Day</i>, <i>Astérix y Obélix</i>, <i>body of lies</i> y muchas más.",
     linkTitle: "Conocer más proyectos",
     linkURL: "",
   },
@@ -27,7 +27,7 @@ const CARD = [
     icon: World,
     title: "Cocinando para el Mundo",
     description:
-      "Su espíritu viajero lo ha llevado a recorrer diferentes continentes, desde la gran manzana en EE. UU. hasta el corazón de Madrid. Desde los desiertos de Marruecos hasta los viñedos de Alemania, y en cada paso, ha dejado su huella gastronómica.",
+      "Su espíritu viajero lo ha llevado a recorrer diferentes países, desde la gran manzana en EE. UU. hasta el corazón de Madrid. Desde los desiertos de Marruecos hasta los viñedos de Alemania, y en cada paso, ha dejado su huella gastronómica.",
     linkTitle: "Viaja con él a través de sus fotos ",
     linkURL: "/galery",
   },
@@ -43,9 +43,16 @@ const CARD = [
             <card.icon class="size-8 shrink-0" />
             <h3 class="ml-3  text-xl font-semibold" set:html={card.title} />
           </div>
-          <p class="block leading-normal mb-6 font-light" set:html={card.description} />
-          <Button text={card.linkTitle} color="primary" link={card.linkURL} blank="false"/>
-          
+          <p
+            class="block leading-normal mb-6 font-light"
+            set:html={card.description}
+          />
+          <Button
+            text={card.linkTitle}
+            color="primary"
+            link={card.linkURL}
+            blank="false"
+          />
         </div>
       ))
     }

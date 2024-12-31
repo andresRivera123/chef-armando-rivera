@@ -5,7 +5,11 @@ import UnitedStates from "../icons/UnitedStates.astro";
 interface Project {
   metaTitle: string;
   metaDescription: string;
-  img: string;
+  images: {
+    label?: string[];
+    src: string[];
+    description: string[];
+  }[];
   country: string;
   iconCountry: any;
   date: string;
@@ -18,7 +22,15 @@ const PROJECTS: Project[] = [
   {
     metaTitle: "a ",
     metaDescription: "S",
-    img: "/featured-card-richtershof-alemania-1.webp",
+    images: [
+      {
+        src: [
+          "/richtershof-alemania-cover-card.webp",
+          "/richtershof-alemania-cover-card.webp",
+        ],
+        description: ["Primera vez en alemania", "Segunda vez en Alemania"],
+      },
+    ],
     country: "Alemania",
     iconCountry: Germany,
     date: "2014",
@@ -30,7 +42,15 @@ const PROJECTS: Project[] = [
   {
     metaTitle: "a ",
     metaDescription: "S",
-    img: "/featured-card-richtershof-alemania-1.webp",
+    images: [
+      {
+        src: [
+          "/about-me/amigo-camion-catering-rafael-chef-armando-rivera.webp",
+          "/about-me/amigo-camion-catering-rafael-chef-armando-rivera.webp",
+        ],
+        description: ["Primera vez en alemania", "Segunda vez en Alemania"],
+      },
+    ],
     country: "Marruecos",
     iconCountry: Germany,
     date: "2024-11-25",
@@ -42,7 +62,15 @@ const PROJECTS: Project[] = [
   {
     metaTitle: "a ",
     metaDescription: "S",
-    img: "/featured-card-richtershof-alemania-1.webp",
+    images: [
+      {
+        src: [
+          "/richtershof-alemania-cover-card.webp",
+          "/richtershof-alemania-cover-card.webp",
+        ],
+        description: ["Primera vez en alemania", "Segunda vez en Alemania"],
+      },
+    ],
     country: "Marruecos",
     iconCountry: Germany,
     date: "2024-11-25",
@@ -54,7 +82,15 @@ const PROJECTS: Project[] = [
   {
     metaTitle: "a ",
     metaDescription: "S",
-    img: "/featured-card-richtershof-alemania-1.webp",
+    images: [
+      {
+        src: [
+          "/about-me/amigo-camion-catering-rafael-chef-armando-rivera.webp",
+          "/about-me/amigo-camion-catering-rafael-chef-armando-rivera.webp",
+        ],
+        description: ["Primera vez en alemania", "Segunda vez en Alemania"],
+      },
+    ],
     country: "Marruecos",
     iconCountry: Germany,
     date: "2024-11-25",

@@ -17,7 +17,7 @@ const { img, country, date, title, description, slug} = Astro.props;
   class="md:w-[47%] xl:w-[30%] bg-white border border-gray-200 rounded-lg shadow"
 >
   <a href={`/proyectos/${slug}`}>
-    <img class="rounded-t-lg" src={img} alt="" />
+    <img class="rounded-t-lg w-full h-[240px] object-cover" src={img} alt="" />
   </a>
   <div class="p-5">
     <a href={`/proyectos/${slug}`}>

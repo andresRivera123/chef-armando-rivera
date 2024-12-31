@@ -10,7 +10,7 @@ import SectionContainer from "./SectionContainer.astro";
     {
       PROJECTS.map((project) => (
         <Postpost
-          img={project.img}
+          img={project.images[0].src[0]}
           country={project.country}
           date={project.date}
           title={project.title}

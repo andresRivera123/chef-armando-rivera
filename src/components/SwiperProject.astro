@@ -1,3 +1,8 @@
+---
+const { imageList } = Astro.props;
+console.log(imageList);
+---
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -33,22 +38,16 @@
   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide flex flex-col">
-        <img src="/richtershof-alemania-cover-card.webp" />
-        <p>Soy un texto descripción</p>
-      </div>
-      <div class="swiper-slide flex flex-col">
-        <img
-          src="/about-me/experiencia-richtershof-lemania-chef-armando-rivera-colegas.webp"
-        />
-        <p>Soy un texto descripción</p>
-      </div>
-      <div class="swiper-slide flex flex-col">
-        <img
-          src="/galery-mansory/chef-armando-rivera-en-parrilla-wichita.webp"
-        />
-        <p>Soy un texto descripción</p>
-      </div>
+      {
+        imageList.map((image: any) =>
+          image.src.map((src: string, imgIndex: number) => (
+            <div class="swiper-slide flex flex-col">
+              <img src={src} alt={image.description[imgIndex]} />
+              <p>{image.description[imgIndex]}</p>
+            </div>
+          ))
+        )
+      }
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>

@@ -4,26 +4,42 @@ import SectionContainer from "./SectionContainer.astro";
 
 <SectionContainer>
   <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
+    <div class="text-center lg:text-left flex flex-col max-w-[800px]">
+      <h1 class="text-4xl sm:text-6xl font-oleo">Chef Armando Rivera</h1>
+
+      <p class="flex gap-2 mt-6 items-center">
+        <span class="text-xl md:text-3xl font-semibold">+25</span>
+        <span class="text-base leading-[100%] text-start"
+          >años de <br />experiencia</span
+        >
+      </p>
+
+      <p class="flex gap-2 mt-4 items-center ">
+        <span class="text-xl md:text-3xl font-semibold">Viajero</span>
+        <span class="text-base leading-[100%] text-start"
+          >con gran pasión<br />en la cocina</span
+        >
+      </p>
+      <p class="flex gap-2 mt-4 items-center">
+        <span class="text-xl md:text-3xl font-semibold">Explorando</span>
+        <span class="text-base leading-[100%] text-start"
+          >culturas y gastronomía<br /> internacional</span
+        >
+      </p>
+    </div>
     <img
       id="hero-image"
       src="/slider-hero-chef-armando-rivera-1.webp"
       alt="Chef Armando Rivera"
       class="z-0 w-full sm:w-auto sm:h-[500px] transition-all ease-in-out duration-500"
     />
-    <div class="text-center lg:text-left flex flex-col max-w-[800px]">
-      <h1 class="text-4xl sm:text-6xl font-oleo">Chef Armando Rivera</h1>
-      <h2 class="text-base sm:text-xl mt-1 text-balance">
-        25 años explorando culturas, fusionando tradiciones y llevando el
-        Mediterráneo al corazón del mundo.
-      </h2>
-    </div>
   </div>
 </SectionContainer>
 
 <style>
   @keyframes slideIn {
     from {
-      transform: translateX(-100%);
+      transform: translateX(100%);
       opacity: 0;
     }
     to {
