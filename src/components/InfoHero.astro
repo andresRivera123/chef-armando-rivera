@@ -1,0 +1,17 @@
+---
+// InfoBlock.astro
+interface Props {
+  title: string;
+  subtitle1: string;
+  subtitle2: string;
+}
+
+const { title, subtitle1, subtitle2 } = Astro.props;
+---
+
+<p class="block xs:flex gap-2 mt-4 xs:mt-6 items-center justify-center lg:justify-start leading-[100%] text-pretty">
+  <span class="text-xl xs:text-2xl sm:text-3xl font-semibold">{title}</span>
+  <span class="text-base xs:leading-[100%] text-start">
+    {subtitle1}<br class="hidden xs:block" /> {subtitle2}
+  </span>
+</p>

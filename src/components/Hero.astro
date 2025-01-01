@@ -1,77 +1,72 @@
 ---
+import InfoHero from "./infoHero.astro";
 import SectionContainer from "./SectionContainer.astro";
 ---
 
 <SectionContainer>
-  <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
+  <div class="flex flex-col mt-3 lg:flex-row justify-center items-center gap-10">
     <div class="text-center lg:text-left flex flex-col max-w-[800px]">
-      <h1 class="text-4xl sm:text-6xl font-oleo">Chef Armando Rivera</h1>
+      <h1 class="text-4xl sm:text-6xl font-oleo mb-2">Chef Armando Rivera</h1>
+      <InfoHero title="+25" subtitle1="años de" subtitle2="experiencia" />
 
-      <p class="flex gap-2 mt-6 items-center">
-        <span class="text-xl md:text-3xl font-semibold">+25</span>
-        <span class="text-base leading-[100%] text-start"
-          >años de <br />experiencia</span
-        >
-      </p>
+      <InfoHero
+        title="Viajero"
+        subtitle1="con gran pasión"
+        subtitle2="en la cocina"
+      />
 
-      <p class="flex gap-2 mt-4 items-center ">
-        <span class="text-xl md:text-3xl font-semibold">Viajero</span>
-        <span class="text-base leading-[100%] text-start"
-          >con gran pasión<br />en la cocina</span
-        >
-      </p>
-      <p class="flex gap-2 mt-4 items-center">
-        <span class="text-xl md:text-3xl font-semibold">Explorando</span>
-        <span class="text-base leading-[100%] text-start"
-          >culturas y gastronomía<br /> internacional</span
-        >
-      </p>
+      <InfoHero
+        title="Conectando"
+        subtitle1="culturas y"
+        subtitle2="gastronomía global"
+      />
     </div>
     <img
       id="hero-image"
       src="/slider-hero-chef-armando-rivera-1.webp"
       alt="Chef Armando Rivera"
-      class="z-0 w-full sm:w-auto sm:h-[500px] transition-all ease-in-out duration-500"
+      class="z-0 w-full sm:w-auto sm:h-[500px] transition-all ease-in-out duration-500 opacity-0"
     />
   </div>
 </SectionContainer>
 
 <style>
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
+  @keyframes fadeInOut {
+    0% {
       opacity: 0;
     }
-    to {
-      transform: translateX(0);
+    10% {
       opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 
   #hero-image {
-    animation: slideIn 1s ease-in-out;
+    animation: fadeInOut 5s ease-in-out infinite;
   }
 </style>
 
 <script>
-  const heroImages = [
+  const images = [
     "/slider-hero-chef-armando-rivera-1.webp",
     "/slider-hero-chef-armando-rivera-2.webp",
     "/slider-hero-chef-armando-rivera-3.webp",
   ];
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const heroImage = document.getElementById("hero-image") as HTMLImageElement;
-    let currentImagenIndex = 0;
+  const heroImage = document.getElementById("hero-image");
+  if (heroImage instanceof HTMLImageElement) {
+    let currentImageIndex = 0;
 
     setInterval(() => {
-      heroImage.style.animation = "none";
-      void heroImage.offsetWidth;
-      currentImagenIndex = (currentImagenIndex + 1) % heroImages.length;
-      heroImage.src = heroImages[currentImagenIndex];
-      setTimeout(() => {
-        heroImage.style.animation = "slideIn 1s ease-in-out";
-      }, 10);
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      heroImage.src = images[currentImageIndex];
     }, 5000);
-  });
+  } else {
+    console.error("La imagen no se pudo cargar...");
+  }
 </script>

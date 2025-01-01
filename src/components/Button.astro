@@ -15,8 +15,8 @@ const { text, color = "primary", icon = ArrowRight, link, blank } = Astro.props;
 <a
   href={link}
   target={blank === true ? "_blank" : "_self"}
-  class={`w-max mb-4 inline-flex items-center px-4 py-2 text-sm font-medium border ${color === "primary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""} ${color === "secondary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""}`}
+  class={`max-w-max mb-4 inline-flex items-center px-4 py-2 text-sm font-medium border text-pretty ${color === "primary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""} ${color === "secondary" ? "bg-white border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""}`}
 >
   {text}
-  <ArrowRight/>
+  <ArrowRight />
 </a>
