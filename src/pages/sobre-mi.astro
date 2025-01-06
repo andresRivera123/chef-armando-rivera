@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Curriculum from "../components/Curriculum.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+
+---
+
+<Layout title="Sobre mi" description="">
+  <SectionContainer class="lg:w-[60%] mx-auto">
+    <h1 class="mt-3 mb-4 text-2xl sm:text-3xl text-center font-bold">
+      Sobre mi: <span class="text-normal"
+        >Un Viaje Entre Sabores, Cine y Excelencia Culinaria</span
+      >
+    </h1>
+    <Curriculum />
+    <ExperienceTimeline />
+  </SectionContainer>
+</Layout>

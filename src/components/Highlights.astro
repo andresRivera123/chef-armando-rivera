@@ -13,7 +13,7 @@ const CARD = [
     description:
       "Su amplia experiencia en cocina internacional (Mediterránea, Española y Americana), y sus prestigiosos títulos y certificaciones, resaltan su capacidad para liderar equipos y mantener la excelencia en entornos desafiantes.",
     linkTitle: "Detalles sobre su carrera",
-    linkURL: "/about",
+    linkURL: "/sobre-mi",
   },
   {
     icon: Movie,
@@ -21,7 +21,7 @@ const CARD = [
     description:
       "Participando como cocinero en grandes producciones cinematográficas como: <i>Juego de tronos</i>, <i>El Laberinto del Fauno</i>, <i>Damsel</i>, <i>Knight and Day</i>, <i>Astérix y Obélix</i>, <i>body of lies</i> y muchas más.",
     linkTitle: "Conocer más proyectos",
-    linkURL: "",
+    linkURL: "/blog",
   },
   {
     icon: World,
@@ -29,7 +29,7 @@ const CARD = [
     description:
       "Su espíritu viajero lo ha llevado a recorrer diferentes países, desde la gran manzana en EE. UU. hasta el corazón de Madrid. Desde los desiertos de Marruecos hasta los viñedos de Alemania, y en cada paso, ha dejado su huella gastronómica.",
     linkTitle: "Viaja con él a través de sus fotos ",
-    linkURL: "/galery",
+    linkURL: "/galeria",
   },
 ];
 ---
@@ -51,7 +51,7 @@ const CARD = [
             text={card.linkTitle}
             color="primary"
             link={card.linkURL}
-            blank="false"
+            blank={false}
           />
         </div>
       ))

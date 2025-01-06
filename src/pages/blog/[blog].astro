@@ -2,21 +2,21 @@
 import SectionContainer from "../../components/SectionContainer.astro";
 import SwiperProject from "../../components/SwiperProject.astro";
 import Layout from "../../layouts/Layout.astro";
-import PROJECTS from "../../utils/Projects.ts";
+import BLOGS from "../../utils/Blogs.ts";
 
 export function getStaticPaths() {
-  const paths = PROJECTS.map((project) => ({
-    params: { project: project.slug },
+  const paths = BLOGS.map((blog) => ({
+    params: { blog: blog.slug },
   }));
   console.log("Generated paths:", paths);
   return paths;
 }
 
-const { project } = Astro.params;
-const currentProject = PROJECTS.find((p) => p.slug === project);
+const { blog } = Astro.params;
+const currentProject = BLOGS.find((p) => p.slug === blog);
 
 if (!currentProject) {
-  throw new Error(`No se encontró el proyecto "${project}"`);
+  throw new Error(`No se encontró el proyecto "${blog}"`);
 }
 ---
 
@@ -38,10 +38,12 @@ if (!currentProject) {
       </div>
       <hr class="my-4" />
       <p class="mb-6 text-base xl:text-lg">{currentProject.description}</p>
-      <SwiperProject imageList={currentProject.images}/>
+      <SwiperProject imageList={currentProject.images} />
     </div>
     <aside class="w-full lg:w-2/6 bg-white">
-      <h2 class="text-xl sm:text-2xl mt-4 mb-6 font-bold text-center">Ver más proyectos</h2>
+      <h2 class="text-xl sm:text-2xl mt-4 mb-6 font-bold text-center">
+        Ver más proyectos
+      </h2>
     </aside>
   </SectionContainer>
 </Layout>

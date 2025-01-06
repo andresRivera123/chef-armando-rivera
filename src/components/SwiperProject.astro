@@ -42,7 +42,8 @@ console.log(imageList);
         imageList.map((image: any) =>
           image.src.map((src: string, imgIndex: number) => (
             <div class="swiper-slide flex flex-col">
-              <img src={src} alt={image.description[imgIndex]} />
+              <img src={src} alt={image.description[imgIndex]} class="max-w-[800px]"/>
+              {console.log(src)}
               <p>{image.description[imgIndex]}</p>
             </div>
           ))

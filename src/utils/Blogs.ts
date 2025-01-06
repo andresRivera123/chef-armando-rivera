@@ -2,7 +2,7 @@ import Spain from "../icons/Spain.astro";
 import Germany from "../icons/Germany.astro";
 import UnitedStates from "../icons/UnitedStates.astro";
 
-interface Project {
+interface Blog {
   metaTitle: string;
   metaDescription: string;
   images: {
@@ -18,14 +18,14 @@ interface Project {
   slug: string;
 }
 
-const PROJECTS: Project[] = [
+const BLOGS: Blog[] = [
   {
     metaTitle: "a ",
     metaDescription: "S",
     images: [
       {
         src: [
-          "/richtershof-alemania-cover-card.webp",
+          "https://res.cloudinary.com/docw5yqzl/image/upload/v1735927631/chef-armando-rivera/blog/sevilla-wichita/Jordi_Molla_k6s8ns.jpg",
           "/richtershof-alemania-cover-card.webp",
         ],
         description: ["Primera vez en alemania", "Segunda vez en Alemania"],
@@ -101,4 +101,4 @@ const PROJECTS: Project[] = [
   },
 ];
 
-export default PROJECTS;
+export default BLOGS;
