@@ -10,7 +10,7 @@ interface CardProps {
   slug: string;
 }
 
-const { img, country, date, title, description, slug} = Astro.props;
+const { img, country, date, title, description, slug } = Astro.props;
 ---
 
 <article
@@ -25,7 +25,9 @@ const { img, country, date, title, description, slug} = Astro.props;
         {title}
       </h3></a
     >
-    <p class="mb-4 text-base font-normal text-gray-700">{description}</p>
+    <p class="mb-4 text-base font-normal text-gray-700 line-clamp-3">
+      {description}
+    </p>
     <Link href={`/blog/${slug}`} textLink="Ver proyecto" />
   </div>
 </article>
