@@ -21,7 +21,7 @@ interface Blog {
 
 const BLOGS: Blog[] = [
   {
-    slug: "alemania-weinromantikhotel",
+    slug: "rodaje-pelicula-knight-and-day",
     metaTitle: "Rodaje de Knight and Day con Tom Cruise y Cameron Diaz | Chef Armando Rivera",
     metaDescription: "Armando Rivera, chef del catering Rafael, participó en el rodaje de Knight and Day en Austria y Sevilla. Su colaboración destacó la cocina española en una producción de alto nivel junto a Tom Cruise, Cameron Diaz y el director James Mangold.",
     title: "Rodaje de pelicula Knight and day con Tom cruise y Cameron Diaz",
