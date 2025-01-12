@@ -1,5 +1,6 @@
 import Spain from "../icons/Spain.astro";
 import Germany from "../icons/Germany.astro";
+import Austria from "../icons/Austria.astro";
 import UnitedStates from "../icons/UnitedStates.astro";
 
 interface Blog {
@@ -10,7 +11,7 @@ interface Blog {
   description: string;
   date: string;
   country: string;
-  iconCountry: any;
+  iconCountry: any[];
   mainImage: string;
   images: {
     label?: string[];
@@ -31,7 +32,7 @@ const BLOGS: Blog[] = [
       "Durante el rodaje de Knight and Day, participé como chef del equipo de catering Rafael de Cine, brindando servicios culinarios de alta calidad para una mega producción internacional. La filmación se realizó entre Austria y Sevilla, con la presencia de los reconocidos actores Tom Cruise y Cameron Diaz, además del director James Mangold. Nuestra labor consistió en garantizar una experiencia para el elenco y equipo de producción, la cocina española fue protagonista, destacándose y aportando un valor cultural y sensorial al proyecto cinematográfico.",
     date: "2009",
     country: "Austria y España",
-    iconCountry: Spain,
+    iconCountry: [Austria, Spain],
     mainImage:
       "https://res.cloudinary.com/docw5yqzl/image/upload/v1736279002/chef-armando-rivera/blog/sevilla-wichita/pelicula-wichita-austria-sevilla-09_w8uvxl.jpg",
     images: [
@@ -125,14 +126,16 @@ const BLOGS: Blog[] = [
   },
   {
     slug: "alemania-hotel-richtershof",
-    metaTitle: "Mi experiencia culinaria en Alemania: Hotel Richtershof | Chef Armando Rivera",
-    metaDescription: "Explora mi experiencia culinaria en el Hotel Richtershof, Alemania. Un viaje de aprendizaje gastronómico en 2014, fusionando la cocina española con la alemana.",
+    metaTitle:
+      "Mi experiencia culinaria en Alemania: Hotel Richtershof | Chef Armando Rivera",
+    metaDescription:
+      "Explora mi experiencia culinaria en el Hotel Richtershof, Alemania. Un viaje de aprendizaje gastronómico en 2014, fusionando la cocina española con la alemana.",
     title: "Cocinando en Alemania: Mi experiencia en el Hotel Richtershof",
     description:
       "Buscando una nueva experiencia para adquirir conocimientos en una gastronomía diferente, viajé a Alemania en 2014. Fue mi primera vez en el país, trabajando en el Hotel Richtershof, ubicado en el pintoresco pueblo de Mülheim (Moselle), rodeado de viñedos y naturaleza. Durante mi estadía, conocí a muchas personas con las que creé un vínculo laboral y un equipo de trabajo profesional que me brindó la oportunidad de adquirir un mayor conocimiento en la gastronomía alemana.",
     date: "2014",
     country: "Alemania - Mülheim (Moselle)",
-    iconCountry: Germany,
+    iconCountry: [Germany],
     mainImage:
       "https://res.cloudinary.com/docw5yqzl/image/upload/v1736456142/chef-armando-rivera/blog/alemania/alemania-hotel-richtershof-00_qvipvf.webp",
     images: [

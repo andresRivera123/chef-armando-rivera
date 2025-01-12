@@ -25,25 +25,29 @@ if (!currentProject) {
   description={currentProject.metaDescription}
 >
   <SectionContainer class="flex flex-col lg:flex-row gap-6 mt-3">
-    <div class="w-full lg:w-4/6">
+    <div>
       <h1 class="mb-2 text-2xl sm:text-3xl font-bold">
         {currentProject.title}
       </h1>
       <div class="flex gap-20">
         <p>{currentProject.date}</p>
         <p class="flex items-center gap-2">
-          <currentProject.iconCountry />
+          {currentProject.iconCountry.map((Flag, index) => (
+            <Flag key={index} />
+          ))}
           {currentProject.country}
         </p>
       </div>
       <hr class="my-4" />
       <p class="mb-6 text-base xl:text-lg">{currentProject.description}</p>
-      <SwiperProject imageList={currentProject.images} />
     </div>
-    <aside class="w-full lg:w-2/6 bg-white">
+    <SwiperProject imageList={currentProject.images} />
+  </SectionContainer>
+  <SectionContainer>
+    <div>
       <h2 class="text-xl sm:text-2xl mt-4 mb-6 font-bold text-center">
         Ver más proyectos
       </h2>
-    </aside>
+    </div>
   </SectionContainer>
 </Layout>

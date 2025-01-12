@@ -14,7 +14,7 @@ console.log(imageList);
   }
 
   .swiper {
-    max-width: 1150px;
+    max-width: 700px;
   }
 
   .swiper-slide {
@@ -32,6 +32,12 @@ console.log(imageList);
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 1024px) {
+    .swiper {
+      max-width: 100%;
+    }
+  }
 </style>
 
 <body>
@@ -42,9 +48,18 @@ console.log(imageList);
         imageList.map((image: any) =>
           image.src.map((src: string, imgIndex: number) => (
             <div class="swiper-slide flex flex-col">
-              <img src={src} alt={image.description[imgIndex]} class="max-w-[800px]"/>
+              <img
+                src={src}
+                alt={image.description[imgIndex]}
+                class="max-w-[800px]"
+              />
               {console.log(src)}
-              <p>{image.description[imgIndex]}</p>
+              {/* <div class="w-full py-2 border border-t-0 border-gray-200">
+                {image.description[imgIndex]}
+              </div> */}
+              <p class="w-full py-2 px-1 text-base border border-t-0 border-gray-200">
+                {image.description[imgIndex]}
+              </p>
             </div>
           ))
         )
