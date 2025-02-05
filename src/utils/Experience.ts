@@ -23,7 +23,7 @@ export const EXPERIENCE: Experience[] = [
       "Responsable de la producción y elaboración de alimentos como Cocinero y jefe de Cocina para producciones cinematográficas de alto perfil, tanto en películas como en series nacionales e internacionales. Aseguré la calidad y consistencia de los menús, adaptando la oferta culinaria a las necesidades específicas de cada producción y supervisando al equipo de cocina. ",
     linkTitle: "Conocer empresa",
     linkURL: "https://rafaelcatering.com/",
-    image: "/about-me/amigo-camion-catering-rafael-chef-armando-rivera.webp",
+    image: "/about-me/camion-catering-rafael-chef-armando.webp",
   },
   {
     date: "2014 - 2015",
