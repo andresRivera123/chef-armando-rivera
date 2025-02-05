@@ -308,7 +308,7 @@ const BLOGS: Blog[] = [
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737829909/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-36_lrmiqv.webp",
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737829909/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-37_h5s8bz.webp",
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737829910/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-38_i4efiu.webp",
-          "https://res.cloudinary.com/docw5yqzl/image/upload/v1737837261/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-59_nqer4e.webp",
+          "https://res.cloudinary.com/docw5yqzl/image/upload/v1738790130/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-61_emmroe.webp",
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737838596/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-60_hzr8h9.webp",
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737829914/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-42_nexwgb.webp",
           "https://res.cloudinary.com/docw5yqzl/image/upload/v1737829912/chef-armando-rivera/blog/body-of-lies/pelicula-body-of-lies-armando-39_mabewc.webp",

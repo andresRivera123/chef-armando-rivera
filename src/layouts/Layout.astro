@@ -19,8 +19,43 @@ const { description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/logo-chef-armando-rivera-favicon.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/logo-chef-armando-rivera-favicon.png"
+    />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://chef-armando-rivera.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chef Armando Rivera" />
+    <meta
+      property="og:description"
+      content="Más de 25 años de experiencia fusionando la cocina internacional y descubriendo culturas gastronómicas. Un viajero con gran pasión en la cocina"
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/e5c63308-050c-4044-a983-bf3e272e0474.jpg?token=wvtTbDBWRZPWyLDN18CitHWjK9HvjXcWqHHSyBJ1Ycc&height=591&width=1200&expires=33274790531"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="chef-armando-rivera.vercel.app" />
+    <meta
+      property="twitter:url"
+      content="https://chef-armando-rivera.vercel.app/"
+    />
+    <meta name="twitter:title" content="Chef Armando Rivera" />
+    <meta
+      name="twitter:description"
+      content="Más de 25 años de experiencia fusionando la cocina internacional y descubriendo culturas gastronómicas. Un viajero con gran pasión en la cocina"
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/e5c63308-050c-4044-a983-bf3e272e0474.jpg?token=wvtTbDBWRZPWyLDN18CitHWjK9HvjXcWqHHSyBJ1Ycc&height=591&width=1200&expires=33274790531"
+    />
+
     <title>{title}</title>
   </head>
   <body>
@@ -78,7 +113,7 @@ const { description } = Astro.props;
     text-wrap: pretty;
   }
 
-  img{
+  img {
     content-loading: auto;
   }
 </style>
