@@ -2,13 +2,18 @@
 import PROJECTS from "../utils/Blogs";
 import Postpost from "./PostCard.astro";
 import SectionContainer from "./SectionContainer.astro";
+
+const { currentSlug } = Astro.props;
+const projectsToDisplay = currentSlug
+  ? PROJECTS.filter((project) => project.slug !== currentSlug)
+  : PROJECTS;
 ---
 
 <SectionContainer>
   <h2 class="text-xl sm:text-2xl mb-6 font-semibold">Proyectos</h2>
-  <div class="flex flex-row flex-wrap gap-8 justify-between">
+  <div class="flex flex-row flex-wrap gap-8 justify-start">
     {
-      PROJECTS.map((project) => (
+      projectsToDisplay.map((project) => (
         <Postpost
           img={project.mainImage}
           country={project.country}

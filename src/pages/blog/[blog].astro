@@ -1,4 +1,5 @@
 ---
+import PostList from "../../components/PostList.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import SwiperProject from "../../components/SwiperProject.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -51,6 +52,7 @@ if (!currentProject) {
       <h2 class="text-xl sm:text-2xl mt-4 mb-6 font-bold text-center">
         Ver más proyectos
       </h2>
+      <PostList currentSlug={currentProject.slug} />
     </div>
   </SectionContainer>
 </Layout>
